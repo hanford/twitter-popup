@@ -1,0 +1,31 @@
+{
+  "name": "popTweet",
+  "version": "0.0.1",
+  "manifest_version": 2,
+  "description": "Browse Instagram from anywhere",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "128": "icon.png"
+  },
+  "permissions": [
+    "webRequest",
+    "webRequestBlocking",
+    "https://mobile.twitter.com/*"
+  ],
+  "browser_action": {
+    "default_popup": "index.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "default_locale": "en",
+  "content_scripts": [
+    {
+      "matches": ["https://mobile.twitter.com/*"],
+      "js": ["ua-override.js"],
+      "run_at" : "document_start",
+      "all_frames": true
+    }
+  ]
+}
