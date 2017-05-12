@@ -1,8 +1,8 @@
 {
-  "name": "popTweet",
+  "name": "twitter-popup",
   "version": "0.0.1",
   "manifest_version": 2,
-  "description": "Browse Instagram from anywhere",
+  "description": "Browse twitter from anywhere",
   "icons": {
     "16": "icon.png",
     "32": "icon.png",
